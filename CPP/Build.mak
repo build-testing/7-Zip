@@ -210,7 +210,7 @@ $O/asm:
 !ENDIF
 
 $(PROGPATH): $O $O/asm $(OBJS) $(DEF_FILE)
-	link $(LFLAGS) -out:$(PROGPATH) $(OBJS) $(LIBS)
+	lld-link.exe $(LFLAGS) -out:$(PROGPATH) $(OBJS) $(LIBS)
 
 !IFNDEF NO_DEFAULT_RES
 $O\resource.res: $(*B).rc
